@@ -1,0 +1,33 @@
+{
+    "name": "fbt-sync",
+    "version": "1.0.1",
+    "description": "A CLI for uploading native phrases and downloading reviewed translations from Swiftyper platform.",
+    "main": "bin/index.js",
+    "author": "swiftyper",
+    "license": "MIT",
+    "keywords": [
+        "node",
+        "i18n",
+        "framework",
+        "fbt",
+        "internationalization",
+        "cli",
+        "translations",
+        "sync",
+        "deploy"
+    ],
+    "scripts": {
+        "test": "node ./bin/index.js --pretty",
+        "format": "prettier --write ."
+    },
+    "bin": {
+        "fbt-sync": "./bin/index.js"
+    },
+    "dependencies": {
+        "chalk": "^4.1.1",
+        "enquirer": "^2.3.6",
+        "prettier": "^2.7.1",
+        "swiftyper-node": "^1.0.5",
+        "yargs": "^16.1.1"
+    }
+}
