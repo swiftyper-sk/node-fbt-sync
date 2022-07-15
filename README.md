@@ -28,7 +28,7 @@ These steps are required:
 
 2. Init project settings:
     ```shell
-    $ node ./node_modules/.bin/fbt-sync --init
+    $ ./node_modules/.bin/fbt-sync --init
     # or
     $ npx fbt-sync --init
     ```
@@ -38,7 +38,7 @@ These steps are required:
 The CLI will not prompt for an API key if a value is provided in the environment variable `SWIFTYPER_API_KEY`.
 
 | Option                | Description                                  |
-| --------------------- | -------------------------------------------- |
+|-----------------------|----------------------------------------------|
 | --deploy              | Deploy reviewed app translations             |
 | --upload-translations | Upload translations to swiftyper             |
 | --upload-phrases      | Upload native phrases to swiftyper           |

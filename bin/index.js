@@ -35,28 +35,18 @@ const options = yargs
         describe: 'Upload native phrases to swiftyper.',
         demandOption: false,
     })
-    .command({
-        command: '*',
-        async handler(argv) {
-            if (argv._[0]) {
-                if (!utils.getTokenFromEnv()) {
-                    await utils.promptAndSaveToken()
-                }
-            }
-        },
-    })
     .showHelpOnFail()
     .help(true).argv
 
-if (yargs.argv.init === true) {
+if (options.init === true) {
     utils.initCommand()
-} else if (yargs.argv.deploy === true) {
-    const path = yargs.argv.path || ''
-    utils.deployCommand(path, yargs.argv.pretty)
-} else if (yargs.argv['upload-phrases'] === true) {
+} else if (options.deploy === true) {
+    const path = options.path || ''
+    utils.deployCommand(path, options.pretty)
+} else if (options['upload-phrases'] === true) {
     utils.uploadPhrasesCommand()
-} else if (yargs.argv['upload-translations'] === true) {
+} else if (options['upload-translations'] === true) {
     utils.uploadTranslationsCommand()
-} else if (yargs.argv._[0] == null) {
+} else {
     yargs.showHelp()
 }

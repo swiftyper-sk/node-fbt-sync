@@ -83,6 +83,10 @@ async function saveToken(token) {
 async function uploadPhrasesCommand() {
     console.log('⚡  Uploading phrases...')
 
+    if (!getToken()) {
+        await promptAndSaveToken()
+    }
+
     try {
         if (process.stdin.isTTY) {
             console.error(chalk.red.bold('Invalid stdin input.'))
@@ -103,6 +107,10 @@ async function uploadPhrasesCommand() {
 
 async function uploadTranslationsCommand() {
     console.log('⚡  Uploading translations...')
+
+    if (!getToken()) {
+        await promptAndSaveToken()
+    }
 
     try {
         if (process.stdin.isTTY) {
@@ -126,6 +134,10 @@ async function uploadTranslationsCommand() {
 
 async function deployCommand(store_path, pretty) {
     console.log('👽  Translating app...')
+
+    if (!getToken()) {
+        await promptAndSaveToken()
+    }
 
     try {
         let json
@@ -159,6 +171,10 @@ async function deployCommand(store_path, pretty) {
 async function initCommand() {
     console.log('🚀  Initializing project...')
 
+    if (!getToken()) {
+        await promptAndSaveToken()
+    }
+
     try {
         await client.fbt.init({
             platform: 'javascript',
@@ -176,8 +192,6 @@ async function initCommand() {
 module.exports = {
     uploadPhrasesCommand,
     uploadTranslationsCommand,
-    promptAndSaveToken,
-    getTokenFromEnv,
     deployCommand,
     initCommand,
 }
