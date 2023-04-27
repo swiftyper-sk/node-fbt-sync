@@ -1,6 +1,6 @@
 {
     "name": "fbt-sync",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A CLI for uploading native phrases and downloading reviewed translations from Swiftyper platform.",
     "main": "bin/index.js",
     "author": "swiftyper",
