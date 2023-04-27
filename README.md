@@ -35,7 +35,7 @@ These steps are required:
 
 ### Options
 
-The CLI will not prompt for an API key if a value is provided in the environment variable `SWIFTYPER_API_KEY`.
+The CLI will not prompt for an API key if a value is provided in the environment variable `SWIFTYPER_API_KEY` or defined in `.env` file.
 
 | Option                | Description                                  |
 |-----------------------|----------------------------------------------|

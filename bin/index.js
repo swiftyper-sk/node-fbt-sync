@@ -4,6 +4,10 @@ const chalk = require('chalk')
 const utils = require('./utils.js')
 const usage = chalk.keyword('violet')('\nUsage: fbt-sync')
 const yargs = require('yargs')
+const dotenv = require('dotenv')
+
+// Load environment variables from .env file
+dotenv.config()
 
 const options = yargs
     .usage(usage)

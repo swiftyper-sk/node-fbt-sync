@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "chalk": "^4.1.1",
+        "dotenv": "^16.0.3",
         "enquirer": "^2.3.6",
         "prettier": "^2.7.1",
         "swiftyper-node": "^1.0.5",
