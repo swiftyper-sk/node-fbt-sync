@@ -4,7 +4,11 @@ const { prompt } = require('enquirer')
 const Swiftyper = require('swiftyper-node')
 const fs = require('fs')
 const path = require('path')
+const dotenv = require('dotenv')
 const resolve = path.resolve
+
+// Load environment variables from .env file
+dotenv.config()
 
 const CONFIG_FILE = path.join(homedir, '.config', 'swiftyper')
 const ACCOUNT_URL = 'https://manage.swiftyper.sk'
